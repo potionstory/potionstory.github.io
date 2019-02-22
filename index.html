@@ -22,6 +22,7 @@
     footer {padding:30px 0;text-align:center;}
     footer a {display:inline-block;background-color:#129bfb;padding:0 20px;height:50px;border-radius:50px;line-height:50px;font-size:1.2rem;font-weight:bold;color:white;text-decoration:none}
   </style>
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=vhq1RBlKmlglZiP6eslJ"></script>
   <title>2019년 1차 정모</title>
 </head>
 <body>
@@ -39,7 +40,15 @@
       <li>일시 : 2019년 3월 30일(토) 15:00 ~ 20:00</li>
       <li>
         장소 : 서울시 강남구 XXXX 파티룸
-        <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td style="border:1px solid #cecece;"><a href="https://map.naver.com/?searchCoord=5edc734464be78d13d2af51f2e160cecdde059f2e0a44e9cdaa97d88d1d793ad&query=7Iqs66Gc7Jqw65Oc66a8&tab=1&lng=7725919bd4dcdb1f5e8271ab73d96a65&mapMode=0&mpx=c30dc7127ba58668f9689b8754ce70bf3ae68cc2dfbefad0037da9794c9b819cbb07c4a7427e5926deb00189770c494345418caa224bb2ac676fb0e901a8b07e&lat=f4feb3729c1289ca18ab27522a8ba02b&dlevel=12&enc=b64&menu=location" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1550825916313_-1983869655" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2019.2.22</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="https://map.naver.com/?searchCoord=5edc734464be78d13d2af51f2e160cecdde059f2e0a44e9cdaa97d88d1d793ad&query=7Iqs66Gc7Jqw65Oc66a8&tab=1&lng=7725919bd4dcdb1f5e8271ab73d96a65&mapMode=0&mpx=c30dc7127ba58668f9689b8754ce70bf3ae68cc2dfbefad0037da9794c9b819cbb07c4a7427e5926deb00189770c494345418caa224bb2ac676fb0e901a8b07e&lat=f4feb3729c1289ca18ab27522a8ba02b&dlevel=12&enc=b64&menu=location" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+        <div id="map" style="width:100%;height:400px;"></div>
+        <script>
+          var mapOptions = {
+              center: new naver.maps.LatLng(37.3595704, 127.105399),
+              zoom: 10
+          };
+          
+          var map = new naver.maps.Map('map', mapOptions);
+        </script>
       </li>
     </ul>
     <h2>내용</h2>
