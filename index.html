@@ -123,16 +123,14 @@
   <footer>
     <a href="https://open.kakao.com/o/gPPPcOfb" onClick="javascript:alert('참여코드: 0330')">참가하기</a>
   </footer>
-  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=njcmugevym&callback=initMap"></script>
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=njcmugevym"></script>
   <script type="text/javascript">
-    var map = null;
+  //지도를 삽입할 HTML 요소 또는 HTML 요소의 id를 지정합니다.
+  var mapDiv = document.getElementById('map'); // 'map'으로 선언해도 동일
 
-    function initMap() {
-      map = new naver.maps.Map('map', {
-        center: new naver.maps.LatLng(37.3595704, 127.105399),
-        zoom: 10
-      });
-    }
+  var map = new naver.maps.Map(mapDiv, {
+    center: new naver.maps.LatLng(37.3595704, 127.105399)
+  });
   </script>
 </body>
 </html>
