@@ -124,20 +124,22 @@
     <a href="https://open.kakao.com/o/gPPPcOfb" onClick="javascript:alert('참여코드: 0330')">참가하기</a>
   </footer>
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=njcmugevym&submodules=geocoder"></script>
-
   <script>
-    var map = new naver.maps.Map('map');
-    naver.maps.Service.reverseGeocode({
-        location: new naver.maps.LatLng(37.3595316, 127.1052133),
-    }, function(status, response) {
-        if (status !== naver.maps.Service.Status.OK) {
-            return alert('Something wrong!');
-        }
-
-        var result = response.result, // 검색 결과의 컨테이너
-            items = result.items; // 검색 결과의 배열
-        console.log(items);
-        // do Something
+    var position = new naver.maps.LatLng(37.5126337, 127.0485879); 
+    var mapOptions = { 
+      center: position , 
+      zoom: 10, 
+      scaleControl: false, 
+      logoControl: false, 
+      mapDataControl: false, 
+      mapTypeControl: true, 
+      zoomControl: true, 
+      minZoom: 1 
+    }; 
+    var map = new naver.maps.Map("map", mapOptions); 
+    var marker = new naver.maps.Marker({ 
+      position: position, 
+      map: map 
     });
   </script>
 </body>
