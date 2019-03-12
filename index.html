@@ -122,10 +122,15 @@
     </ul>
   </section>
   <footer>
-    <a href="https://open.kakao.com/o/gPPPcOfb" onClick="javascript:confirm('참여코드: 0330')">참가하기</a>
+    <a href="#none" onClick="javascript:join()">참가하기</a>
   </footer>
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=njcmugevym&submodules=geocoder"></script>
   <script>
+    function join(){
+      if (window.confirm("참여하시겠습니까? 참여코드: 0330")) { 
+        window.open("https://open.kakao.com/o/gPPPcOfb", "Thanks for Visiting!");
+      }
+    }
     var position = new naver.maps.LatLng(37.5126337, 127.0485879); 
     var mapOptions = { 
       center: position , 
